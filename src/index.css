@@ -391,21 +391,29 @@ button {
   text-align: center;
 }
 
-/* Responsive ajustes moviles */
 @media (max-width: 480px) {
   .submenu #carrito {
-    width: 70vw;
-    right: 0;
-    left: 0;
+    position: fixed;
+    /* en lugar de absolute */
+    top: 5rem;
+    /* espacio desde el top del viewport */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90vw;
+    max-height: 80vh;
     margin: 0 auto;
-    min-width: auto;
     border-radius: 0.5rem;
-    padding: 5rem 2rem;
+    padding: 2rem;
+    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    transform: translateX(0%);
+    overflow-y: auto;
+    z-index: 9999;
+  }
+
+  #lista-carrito {
+    width: 100%;
   }
 
   #lista-carrito tr {
@@ -430,6 +438,7 @@ button {
     height: auto;
   }
 }
+
 
 .cart-icon {
   position: relative;
@@ -601,6 +610,21 @@ button {
   }
 }
 
+/* Paginacion */
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+  gap: 1rem;
+}
+
+.pagination-controls button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+
 /* Fin estilos para HomeView.tsx */
 
 
@@ -634,7 +658,7 @@ button {
   flex: 1;
   min-width: 250px;
   max-width: 400px;
-  margin: 0 auto;
+  margin: 4rem auto;
 }
 
 .product-image {

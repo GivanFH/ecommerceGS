@@ -60,24 +60,27 @@ export default function Cart() {
                         {
                             isCartOpen && (
                                 <div id="carrito">
-                                    <table id="lista-carrito">
-                                        <tbody>
-                                            {cart.map((product, index) => (
-                                                <tr key={index}>
-                                                    <td>
-                                                        <img src={product.image} alt={product.title} width={50} />
-                                                    </td>
-                                                    <td>{product.title}</td>
-                                                    <td>${product.price}</td>
-                                                    <td>{product.amount}</td>
-                                                    <td>
-                                                        <AddRemoveProduct product={product} />
-                                                    </td>
+                                    <div className="tabla-carrito">
+                                        <table id="lista-carrito">
+                                            <tbody>
+                                                {cart.map((product, index) => (
+                                                    <tr key={index}>
+                                                        <td>
+                                                            <img src={product.image} alt={product.title} width={50} />
+                                                        </td>
+                                                        <td>{product.title}</td>
+                                                        <td>${product.price}</td>
+                                                        <td>{product.amount}</td>
+                                                        <td>
+                                                            <AddRemoveProduct product={product} />
+                                                        </td>
 
-                                                </tr>
-                                            ))}
-                                        </tbody>
-                                    </table>
+                                                    </tr>
+                                                ))}
+                                            </tbody>
+                                        </table>
+                                    </div>
+
                                     {
                                         cart.length === 0 ? (
                                             <>

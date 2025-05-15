@@ -5,7 +5,7 @@ export default function CheckoutView() {
     const cart = useCartStore(state => state.cart);
 
     const subtotal = cart.reduce((acc, producto) => acc + producto.price * producto.amount, 0);
-    const shippingProtection = 1.50;
+    const shippingProtection = cart.length > 0 ? 1.50 : 0;
     const total = subtotal + shippingProtection;
 
     return (
@@ -34,9 +34,9 @@ export default function CheckoutView() {
                         <img src={product.image} alt={product.title} />
                         <div className="details">
                             <p className="title">{product.title}</p>
-                            <p className="price">{product.amount} x ${product.price.toFixed(2)} : <span className="title">${product.amount * product.price}</span></p>
-                            <AddRemoveProduct product={product} />
+                            <p className="price">{product.amount} x ${product.price.toFixed(2)} : <span className="title">${(product.amount * product.price).toFixed(2)}</span></p>
                         </div>
+                            <AddRemoveProduct product={product} />
                     </div>
                 ))}
 
