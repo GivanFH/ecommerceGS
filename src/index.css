@@ -1,0 +1,1003 @@
+/* Inicio estilos globales */
+body {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  color: #111827;
+  background-color: #F3F4F6;
+  margin: 0;
+  height: 100dvh;
+}
+
+.main {
+  height: 100dvh;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 4.0rem;
+  line-height: 1.2;
+  letter-spacing: -.1rem;
+}
+
+h2 {
+  font-size: 3.6rem;
+  line-height: 1.25;
+  letter-spacing: -.1rem;
+}
+
+h3 {
+  font-size: 3.0rem;
+  line-height: 1.3;
+  letter-spacing: -.1rem;
+}
+
+h4 {
+  font-size: 2.4rem;
+  line-height: 1.35;
+  letter-spacing: -.08rem;
+}
+
+h5 {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  letter-spacing: -.05rem;
+}
+
+h6 {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  letter-spacing: 0;
+}
+
+@media (min-width: 550px) {
+  h1 {
+    font-size: 5.0rem;
+  }
+
+  h2 {
+    font-size: 4.2rem;
+  }
+
+  h3 {
+    font-size: 3.6rem;
+  }
+
+  h4 {
+    font-size: 3.0rem;
+  }
+
+  h5 {
+    font-size: 2.4rem;
+  }
+
+  h6 {
+    font-size: 1.5rem;
+  }
+}
+
+p {
+  margin-top: 0;
+}
+
+
+/* Fin estilos globales */
+
+/* Inicio estilos Header.tsx */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem 1rem 0 1rem;
+  background-color: white;
+  border-bottom: 1px solid #e5e7eb;
+  z-index: 1000;
+}
+
+.header .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+/* movil*/
+header .row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (min-width: 550px) {
+  header .row {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.header .four.columns {
+  margin-right: auto;
+}
+
+.header .two.columns {
+  margin-left: auto;
+}
+
+#logo:hover {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Fin estilos Header.tsx */
+
+/*  Inicio estilos tablas */
+th,
+td {
+  padding: 12px 15px;
+  text-align: center;
+  border-bottom: 2px solid #E1E1E1;
+}
+
+th:first-child,
+td:first-child {
+  padding-left: 0;
+}
+
+th:last-child,
+td:last-child {
+  padding-right: 0;
+}
+
+/*  Fin estilos tablas */
+
+
+/* Inicio utilidades */
+.u-full-width {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.button-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.container:after,
+.row:after,
+.u-cf {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column,
+.columns {
+  width: 100%;
+  float: left;
+  box-sizing: border-box;
+}
+
+/* dispositivos mas grandes que 400px */
+@media (min-width: 400px) {
+  .container {
+    width: 85%;
+    padding: 0;
+  }
+}
+
+/* dispositivos mas grandes que 550px */
+@media (min-width: 550px) {
+  .container {
+    width: 80%;
+  }
+
+  .column,
+  .columns-m {
+    margin: 4px;
+  }
+
+  .column:first-child,
+  .columns:first-child {
+    margin-left: 0;
+  }
+
+  .two.columns {
+    width: 13.3333333333%;
+  }
+
+  .four.columns {
+    width: 30.6666666667%;
+  }
+
+  .six.columns {
+    width: 50%;
+  }
+
+}
+
+.button,
+button {
+  display: inline-block;
+  height: 38px;
+  padding: 0 30px;
+  color: #555;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  cursor: pointer;
+  box-sizing: border-box;
+  margin: .5rem 0;
+}
+
+.button:hover {
+  color: #333;
+  border-color: #888;
+  outline: 0;
+}
+
+/* Fin utilidades */
+
+/*  Inicio estilos para Hero.tsx */
+#hero {
+  position: relative;
+  background-image: url(/hero1.webp);
+  background-size: cover;
+  background-position: center;
+  height: 80rem;
+  overflow: hidden;
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+#hero>* {
+  position: relative;
+  z-index: 2;
+}
+
+.contenido-hero {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+  color: white;
+  padding: 2rem;
+}
+
+.contenido-hero h1 {
+  font-size: 6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.contenido-hero p {
+  font-size: 2.4rem;
+  margin-bottom: 3rem;
+}
+
+.section-img {
+  position: relative;
+  height: 80rem;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.section-img::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.img-left {
+  background-image: url(/hero8.webp);
+}
+
+.img-right {
+  background-image: url(/hero9.webp);
+}
+
+.overlay-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Fin estilos para Hero.tsx */
+
+
+
+/* Inicio estilos para Cart.tsx */
+.submenu {
+  position: relative;
+  list-style-type: unset;
+  margin: 0;
+}
+
+.submenu #carrito {
+  display: none;
+}
+
+.submenu #carrito {
+  display: block;
+  border: 1px solid #ccc;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 10;
+  background-color: white;
+  padding: 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(7, 7, 7, 0.3);
+  width: 50rem;
+  max-height: 80vh;
+  overflow-x: auto;
+  overflow-y: auto;
+  text-align: center;
+}
+
+/* Responsive ajustes moviles */
+@media (max-width: 480px) {
+  .submenu #carrito {
+    width: 70vw;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    min-width: auto;
+    border-radius: 0.5rem;
+    padding: 5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(0%);
+  }
+
+  #lista-carrito tr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+
+  #lista-carrito td {
+    align-items: center;
+    text-align: center;
+    display: block;
+    width: 80%;
+    word-wrap: break-word;
+  }
+
+  #lista-carrito img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.cart-icon {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  color: #333;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background-color: #e74c3c;
+  color: white;
+  font-size: 0.9rem;
+  padding: 2px 6px;
+  border-radius: 999px;
+  font-weight: bold;
+}
+
+/* Fin estilos para Cart.tsx */
+
+/* Inicio estilos para Footer.tsx */
+.footer {
+  background-color: black;
+  margin-top: 4rem;
+  border-top: 1px solid #d1d5db;
+  padding-top: 4rem;
+  font-size: 1.4rem;
+  color: white;
+}
+
+.footer .menu a {
+  display: block;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.footer .menu a:hover {
+  color: #aaaaaa;
+  cursor: pointer;
+}
+
+/* Fin estilos para Footer.tsx */
+
+
+/* Inicio estilos para ProductCard.tsx */
+
+.container-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+}
+
+.product-card {
+  max-width: 500px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border: none;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}
+
+.product-info {
+  padding: 1.8rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-info h4 {
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+  color: #1a1a1a;
+  font-weight: 700;
+  line-height: 1.4;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.product-info p {
+  color: #555;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 1.2rem;
+  flex-grow: 1;
+}
+
+.product-imagen {
+  width: 50%;
+  object-fit: cover;
+  padding: 2rem;
+  background: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.product-precio {
+  font-weight: 800;
+  font-size: 1.3rem;
+  color: #000;
+  margin: 0.6rem 0;
+  letter-spacing: -0.5px;
+}
+
+.product-boton {
+  display: inline-block;
+  margin-top: 1.2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  background-color: #000;
+  color: white;
+  padding: 13px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.product-boton:hover {
+  background-color: #333;
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Fin estilos para ProductCard.tsx */
+
+
+/* Incio estilos para HomeView.tsx */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.products-container {
+  padding: 3rem 1.5rem;
+}
+
+@media (max-width: 480px) {
+  .products-container {
+    padding: 2rem 1rem;
+  }
+
+  .product-info {
+    padding: 1.2rem;
+  }
+}
+
+/* Fin estilos para HomeView.tsx */
+
+
+/* Inicio para estilos ProductView.tsx */
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 15rem 20rem;
+}
+
+@media (max-width: 820px) {
+  .product-container {
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    padding: 15rem 20rem;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .product-container {
+    padding: 12rem 3rem;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.product-image-wrapper {
+  flex: 1;
+  min-width: 250px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.product-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 1rem;
+}
+
+.product-details {
+  flex: 1;
+  min-width: 300px;
+}
+
+.product-badge {
+  display: inline-block;
+  color: green;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.product-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+  color: gold;
+}
+
+.product-reviews {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.product-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.product-description {
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+.product-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.color-selector {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.color-swatch {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: inline-block;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.color-swatch.blue {
+  background-color: #00f;
+}
+
+.color-swatch.pink {
+  background-color: #f9c;
+}
+
+.color-swatch.selected {
+  border-color: #333;
+}
+
+.size-selector {
+  padding: 0.3rem;
+  font-size: 1rem;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.quantity-control span {
+  font-size: 1rem;
+  min-width: 20px;
+  text-align: center;
+}
+
+.quantity-input {
+  width: 50px;
+  height: 32px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000;
+  border: 1px solid #ccc;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+}
+
+.available {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.product-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .product-actions {
+    display: block;
+  }
+}
+
+.btn-disabled {
+  background-color: #eee;
+  color: #999;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: not-allowed;
+}
+
+/* Fin estilos para ProductView.tsx */
+
+
+/* Inicio estilos para Toast.tsx */
+.toast {
+  visibility: hidden;
+  min-width: 250px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  padding: 1rem;
+  position: fixed;
+  z-index: 1000;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.toast.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Fin estilos para Toast-tsx */
+
+
+/* Inicio estilos para CheckoutView.tsx */
+
+@media (max-width: 768px) {
+  .checkout-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .checkout-form,
+  .checkout-summary {
+    flex: 1 1 100%;
+    width: 90%;
+    margin-bottom: 2rem;
+  }
+}
+
+.checkout-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #f5f5f5;
+  max-width: 90%;
+  margin: 10rem auto;
+}
+
+.checkout-form {
+  flex: 0 0 40%;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid #eeeeee;
+  box-shadow: 0 4px 12px rgba(180, 180, 180, 0.3);
+
+}
+
+@media (max-width: 480px) {
+  .checkout-form {
+    margin-top: 5rem;
+  }
+}
+
+.checkout-summary {
+  border: 1px solid #eeeeee;
+  flex: 0 0 48%;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(180, 180, 180, 0.3);
+
+}
+
+
+.checkout-form h2 {
+  margin-bottom: 0.5rem;
+}
+
+.input {
+  display: block;
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 14px;
+  margin-bottom: 2rem;
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.details {
+  flex: 1;
+}
+
+.product img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border: 1px solid #eee;
+  border-radius: 4px;
+}
+
+.title {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.price {
+  font-size: 12px;
+  color: #444;
+}
+
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  font-size: 15px;
+}
+
+.total {
+  font-weight: bold;
+  font-size: 17px;
+  margin-top: 1rem;
+}
+
+/* Fin estilos para CheckoutView.tsx */
+
+/* Inicio estilos Loader.tsx*/
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  border: 3px solid;
+  border-color: #FFF #FFF transparent transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+.loader::after,
+.loader::before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 3px solid;
+  border-color: transparent transparent #FF3D00 #FF3D00;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: rotationBack 0.5s linear infinite;
+  transform-origin: center center;
+}
+
+.loader::before {
+  width: 32px;
+  height: 32px;
+  border-color: #FFF #FFF transparent transparent;
+  animation: rotation 1.5s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotationBack {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+/* Fin estilos Loader.tsx*/
